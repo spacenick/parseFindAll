@@ -1,16 +1,17 @@
-How to use
-
+**How to use**
 
 In Cloud Code:
 
+```javascript
 var parseFindAll = require('cloud/parseFindAll.js');
 var myQuery = new Parse.Query("Whatever");
 myQuery.equalsTo("foo","bar");
 parseFindAll(myQuery).then(function(results){
-		
+	
+	console.log(results.length);
 	// results contains the WHOLE data of the table
-
 });
+```
 
 Browser side:
 
